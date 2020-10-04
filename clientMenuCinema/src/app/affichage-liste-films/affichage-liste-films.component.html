@@ -1,0 +1,12 @@
+<div class="row">
+    <div  class="d-inline-block" style="width:250px;"
+          *ngFor = "let film of liste_films"
+    >
+      <ul class="col-3">
+          <app-film [film] = "film"></app-film>
+      </ul>
+
+    </div>
+
+
+</div>

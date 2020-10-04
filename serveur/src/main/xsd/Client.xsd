@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<xsd:schema
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://projet/integrateur"
+    xmlns="http://projet/integrateur"
+    elementFormDefault="qualified">
+
+    <xsd:element name="client" type="Client"/>
+
+    <xsd:complexType name="Client">
+        <xsd:sequence>
+            <xsd:element name="id" type="Id"/>
+            <xsd:element name="nom" type="xsd:string"/>
+            <xsd:element name="prenom" type="xsd:string"/>
+            <xsd:element name="photo" type="Photo"/>
+            <xsd:element name="tel" type="Tel"/>
+            <xsd:element name="adresse" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:simpleType name="Id">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="\d{3}"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="Photo">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[a-zéàùîçèêëûô]{1,}((.jpg)|(.png))"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="Tel">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="\d{10}"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+</xsd:schema>

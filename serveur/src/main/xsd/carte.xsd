@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema version="1.0"
+           targetNamespace="http://projet/integrateur"
+           xmlns="http://projet/integrateur"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+              
+           <xs:include schemaLocation="Client.xsd"/>
+
+            <xs:element name="carte" type="Carte"/>
+            <xs:complexType name="Carte">
+                <xs:sequence>
+                    <xs:element name="plats" type="Plats" minOccurs="1" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:complexType name="Plats">
+                <xs:sequence>
+                    <xs:element name="plat" type="Plat" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:complexType name="Plat">
+                <xs:sequence>
+                    <xs:element name="idPlat" type="Id"/>
+                    <xs:element name="nomPlat" type="xs:double"/>
+                    <xs:element name="prixPlat" type="xs:double"/>
+                    <xs:element name="urlImagePlat" type="Photo"/>
+                    <xs:element name="typePlat" type="TypeDePlat"/>
+                    <xs:element name="ingredients" type="Ingredients"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:complexType name="Ingredients">
+                <xs:sequence>
+                    <xs:element name="ingredient" type="Ingredient" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:simpleType name="Ingredient">
+                <xs:restriction  base="xs:string">
+                    <xs:enumeration  value="Tomate"/>
+                    <xs:enumeration  value="Mozzarella"/>
+                    <xs:enumeration  value="Oignon"/>
+                    <xs:enumeration  value="Chorizo"/>
+                    <xs:enumeration  value="Thon"/>
+                    <xs:enumeration  value="Saumon"/>
+                    <xs:enumeration  value="Jambon"/>
+                    <xs:enumeration  value="Oeuf"/>
+                </xs:restriction>
+            </xs:simpleType>
+
+            <xs:simpleType name="TypeDePlat">
+                <xs:restriction  base="xs:string">
+                    <xs:enumeration  value="Entrée"/>
+                    <xs:enumeration  value="Plat"/>
+                    <xs:enumeration  value="Dessert"/>
+                    <xs:enumeration  value="Boisson"/>
+                </xs:restriction>
+            </xs:simpleType>
+</xs:schema>

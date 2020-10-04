@@ -1,0 +1,35 @@
+
+.BlockPlusMoins{
+    width: 50%;
+    margin-top: 450px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.moins{
+    float: left;
+}
+.plus{
+    float: right;
+}
+.nb{
+    display: inline-block;
+}
+
+.valideCommande{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.plus .moins{
+
+	background:#EEEEEE;
+	font:bold 13px Arial;
+	border-radius:50%;
+	border:none;
+	color:#000000;
+}

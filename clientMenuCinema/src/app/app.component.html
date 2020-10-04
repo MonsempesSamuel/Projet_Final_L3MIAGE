@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+          
+        <li class="nav-item" routerLinkActive="active">
+          <a  class="nav-link" routerLink="accueil" (click)="clickMenu()">Accueil</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active" >
+            <a class="nav-link" routerLink="menu" (click)="clickRepas()">Repas</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="film" (click)="clickFilm()">Films</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" routerLink="login">Login</a>
+        </li>
+      </ul>
+      <button *ngIf="!isConnected()" class="btn btn-success my-2 my-sm-0" (click)="connexionGoogle()">Connectez vous</button>
+      <button *ngIf="isConnected()" class="btn btn-danger my-2 my-sm-0" (click)="deconnexion()">Deconnectez vous</button>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>

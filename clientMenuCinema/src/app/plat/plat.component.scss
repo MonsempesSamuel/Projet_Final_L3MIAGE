@@ -1,0 +1,16 @@
+.photoPlat{
+    height: 50%;
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ingredientsPlat{
+    font-style: italic;
+    color : #666565
+}
+
+.nomPlat, .ingredientsPlat, .typePlat, .prixPlat{
+    max-width: 100%;
+}

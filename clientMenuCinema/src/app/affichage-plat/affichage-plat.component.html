@@ -1,0 +1,18 @@
+<!-- <div *ngFor="let LePlat of tableauPlat;let i=index" class="blockPlat"> 
+    <app-plat [plat]="LePlat" class="UnPlat"></app-plat> 
+    <input *ngIf="aucuneCommandeOn()" type="button" class="commande" value="Commandez" (click)="setCommandeOn(LePlat)">  
+    <app-commande *ngIf="laBonneCOmmande(LePlat)" class="BouttonsCommandes" [plat]="LePlat" (plat_quantite)="valideCommande($event)"></app-commande>
+</div> -->
+
+ <app-plat *ngFor="let LePlat of tabPlat;let i=index" [plat]="LePlat" [position]="i%2==0" ></app-plat> 
+
+<!-- <div class="container">
+
+    <div class="row">
+      <div class="col-md-4" *ngFor="let LePlat of tableauPlat;let i=index">
+        <div class="card mb-4 shadow-sm">
+            <app-plat [plat]="LePlat" class="UnPlat"></app-plat> 
+        </div>
+      </div>
+    </div>
+  </div> -->

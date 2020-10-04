@@ -1,0 +1,90 @@
+<p>&nbsp;</p>
+
+<div class="container">
+
+    <h4 class="d-flex justify-content-between align-items-center mb-3">
+        <span class="text-muted">Adresse de livraison</span>
+    </h4>
+    
+    <form (ngSubmit)="onSubmit(f)" #f='ngForm'>
+        <div >
+          <tr class="row justify-content-start">
+                <th>
+                    <div class="form-group">
+                        <label for="rue">
+                            Rue * 
+                        </label>
+                        <input type="text" id="rue" class="form-control" name="rue" ngModel>
+                    </div>
+                </th>
+
+                <th> &nbsp; </th>
+
+                
+                
+                <th>
+                    <div class="form-group">
+                        <label for="tel">
+                        Téléphone
+                        </label>
+                        <input type="text" id="tel" class="form-control" name="tel" ngModel>
+                    </div>                   
+                </th>
+          </tr>
+
+          <tr class="row justify-content-start">
+                <th>
+                    <div class="form-group">
+                        <label for="Ville">
+                        Ville * 
+                        </label> 
+                        <input type="text" id="ville" class="form-control" name="ville" ngModel>
+                    </div>
+                </th>
+
+                
+                <th> &nbsp; </th>
+            
+                <th>
+                    <div class="form-group">
+                        <label for="pays">
+                        Pays
+                        </label> 
+                        <input type="text" id="pays" class="form-control" name="pays" ngModel>
+                    </div>
+                </th>
+            </tr>
+
+            <tr class="row justify-content-start">
+                <th>
+                    <div class="form-group">
+                        <label for="codeP">
+                        Code Postal * 
+                        </label>
+                        <input type="text" id="codeP" class="form-control" name="codeP" ngModel>
+                    </div>
+                </th>
+
+                
+                <th> &nbsp; </th>
+            
+            </tr>
+            <div>
+                <span *ngIf="ManqueVille()" style="color: red;font-size: 12px;">* Veuillez saisir une ville<br></span>
+                <span *ngIf="ManqueCP()" style="color: red;font-size: 12px;">* Veuillez saisir un code postale<br></span>
+                <span *ngIf="ManqueRue()" style="color: red;font-size: 12px;">* Veuillez saisir une rue<br></span>
+            </div>
+            <tr class="row justify-content-start">
+                <button type="submit" class="btn btn-primary">Confirmez l'adresse de livraison</button>
+            </tr>
+
+
+
+        </div>
+
+
+    </form>   
+
+</div>
+
+<p>&nbsp;</p>

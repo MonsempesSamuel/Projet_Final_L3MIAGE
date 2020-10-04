@@ -1,0 +1,25 @@
+<div class="row featurette" *ngIf="position">
+    <div class="ml-3 col-md-6">
+      <h2 class="featurette-heading"> {{getNom()}}</h2><h5><span class="text-muted">{{getType()}} {{getPrix()}}€</span></h5>
+      <p class="lead">Les ingrédients sont : <br><span *ngFor="let ingredient of getIngredients();let i=index;" > {{ingredient}}<span *ngIf="!dernierIngredient(i)">,</span> </span></p>  
+      <button class="btn btn-secondary mt-16" *ngIf="aucuneCommandeOn()" (click)="setCommandeOn()">Commandez</button>
+      <app-commande *ngIf="laBonneCOmmande()" class="" [plat]="plat" (plat_quantite)="valideCommande($event)"></app-commande>
+    </div>
+    <div class="col-md-5">
+      <img class="rounded-circle featurette-image img-fluid mx-auto" data-src="holder.js/300x300/auto" alt="300x300" style="width: 300px; height: 300px;" [src]="getUrl()" data-holder-rendered="true">
+    </div>
+  </div>
+
+  <div class="row featurette" *ngIf="!position">
+    <div class="ml-3 col-md-6 order-md-2">
+        <h2 class="featurette-heading"> {{getNom()}}</h2><h5><span class="text-muted">{{getType()}} {{getPrix()}}€</span></h5>
+        <p class="lead">Les ingrédients sont : <br><span *ngFor="let ingredient of getIngredients();let i=index;" > {{ingredient}}<span *ngIf="!dernierIngredient(i)">,</span> </span></p>  
+        <button class="btn btn-secondary mt-16" *ngIf="aucuneCommandeOn()" (click)="setCommandeOn()">Commandez</button>
+        <app-commande *ngIf="laBonneCOmmande()" class="" [plat]="plat" (plat_quantite)="valideCommande($event)"></app-commande>
+    </div>
+    <div class="col-md-5 order-md-1">
+        <img class="rounded-circle featurette-image img-fluid mx-auto" data-src="holder.js/300x300/auto" alt="300x300" style="width: 300px; height: 300px;" [src]="getUrl()" data-holder-rendered="true">
+    </div>
+  </div>
+  
+  <hr class="featurette-divider">

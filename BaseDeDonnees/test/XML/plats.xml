@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Plats>
+    
+    <plat>
+        <idPlat>1</idPlat>
+        <nomPlat> Pâtes à la carbonnara </nomPlat>
+        <prixPlat>5.91</prixPlat>
+        <urlImagePlat>https://www.ptitchef.com/imgupl/recipe/pates-a-la-carbonara-la-vraie-recette--md-449563p702930.jpg</urlImagePlat>
+        <typePlat>Pâtes</typePlat>
+        <ingredientsPlat>Spaghetti</ingredientsPlat>
+        <ingredientsPlat>Crème fraiche</ingredientsPlat>
+        <ingredientsPlat>Oeuf</ingredientsPlat>
+        <ingredientsPlat>Lardons</ingredientsPlat>
+    </plat>
+    
+    <plat>
+        <idPlat>2</idPlat>
+        <nomPlat> Magret de Canard </nomPlat>
+        <prixPlat>15.90</prixPlat>
+        <urlImagePlat>https://www.papillesetpupilles.fr/wp-content/uploads/2009/05/Magret-de-canard-%C2%A9margouillat-photo.-shutterstock.jpg</urlImagePlat>
+        <typePlat>Viande</typePlat>
+        <ingredientsPlat>Canard</ingredientsPlat>
+        <ingredientsPlat>Herbes de provences</ingredientsPlat>
+    </plat>
+    
+    <plat>
+        <idPlat>3</idPlat>
+        <nomPlat> Burger Maison </nomPlat>
+        <prixPlat>8.90</prixPlat>
+        <urlImagePlat>https://www.usine-digitale.fr/mediatheque/4/7/1/000812174_homePageUne/beyond-meat.jpg</urlImagePlat>
+        <typePlat>Burger</typePlat>
+        <ingredientsPlat>Steak haché</ingredientsPlat>
+        <ingredientsPlat>Tomates</ingredientsPlat>
+        <ingredientsPlat>Steak haché</ingredientsPlat>
+        <ingredientsPlat>Salade</ingredientsPlat>
+        <ingredientsPlat>Oignons</ingredientsPlat>
+        <ingredientsPlat>Sauce maison</ingredientsPlat>
+        <ingredientsPlat>Pain burger maison</ingredientsPlat>
+    </plat> 
+    
+    <plat>
+        <idPlat>4</idPlat>
+        <nomPlat> Croziflette </nomPlat>
+        <prixPlat>18.90</prixPlat>
+        <urlImagePlat>https://img.cuisineaz.com/400x320/2014-02-11/i93980-croziflette.jpg</urlImagePlat>
+        <typePlat>Savoie</typePlat>
+        <ingredientsPlat>Reblochon</ingredientsPlat>
+        <ingredientsPlat>Crozet</ingredientsPlat>
+        <ingredientsPlat>Lardon</ingredientsPlat>
+        <ingredientsPlat>Oignon</ingredientsPlat>
+    </plat>
+
+    <plat>
+        <idPlat>5</idPlat>
+        <nomPlat> Tacos Maison </nomPlat>
+        <prixPlat>4.50</prixPlat>
+        <urlImagePlat>https://www.toute-la-franchise.com/images/zoom/tacos-restaurant-takos-king-130918.jpg</urlImagePlat>
+        <typePlat>Tacos</typePlat>
+        <ingredientsPlat>Steak haché</ingredientsPlat>
+        <ingredientsPlat>Frites</ingredientsPlat>
+        <ingredientsPlat>Salade</ingredientsPlat>
+        <ingredientsPlat>Tomates</ingredientsPlat>
+        <ingredientsPlat>Oignon</ingredientsPlat>
+        <ingredientsPlat>Sauce maison</ingredientsPlat>
+        <ingredientsPlat>Feuilles tacos maison</ingredientsPlat>
+    </plat>
+    
+</Plats>

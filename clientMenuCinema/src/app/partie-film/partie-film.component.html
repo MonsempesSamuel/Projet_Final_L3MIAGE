@@ -1,0 +1,32 @@
+<p></p>
+
+<app-recherche-film></app-recherche-film>
+
+<div class="container">
+
+    <p></p>
+    <h1><strong>Les films du moment</strong></h1>
+    <p> <a routerLink="/menu">Retour</a> </p>
+  
+</div> 
+
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+
+        
+        <div class="col-8">
+            <app-affichage-liste-films [liste_films] = "films"></app-affichage-liste-films>
+        </div>
+    
+
+        <div class="col-2">
+            <app-panier-client></app-panier-client>
+        </div>    
+
+    </div> 
+</div>
+    
+  
+
+

@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<xsd:schema
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://projet/integrateur"
+    xmlns="http://projet/integrateur"
+    elementFormDefault="qualified">
+
+    <xsd:include schemaLocation="Client.xsd"/>
+
+    <xsd:element name="commande" type="Commande"/>
+
+    <xsd:complexType name="Commande">
+        <xsd:sequence>
+            <xsd:element name="id" type="Id"/>
+            <xsd:element name="date" type="xsd:date"/>
+            <xsd:element name="idClient" type="Id"/>
+            <xsd:element name="idPlats" type="ListIdPlats"/>
+            <xsd:element name="idFilms" type="ListIdFilms"/>
+            <xsd:element name="prix" type="double"/>
+            <xsd:element name="adresseLivraison" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="ListIdPlats">
+        <xsd:sequence>
+            <xsd:element name="plat" type="Id"  minOccurs="1"  maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="ListIdFilms">
+        <xsd:sequence>
+            <xsd:element name="film" type="Id"  minOccurs="1"  maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+</xsd:schema>

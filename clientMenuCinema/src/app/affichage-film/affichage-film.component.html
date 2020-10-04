@@ -1,0 +1,58 @@
+<p></p>
+
+<app-recherche-film></app-recherche-film>
+
+
+<div class="container">
+
+    <p></p>
+    <h1><strong>Détails film</strong></h1>
+    <p> <a routerLink={{retour}}>Retour</a> </p>
+  
+</div> 
+
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+
+        
+        <div class="col-8">
+
+            <li class="list-group-item">
+        
+                <p>  </p>
+
+                <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{film.poster_path}}" alt="">
+                
+                <p>  </p>
+
+                <h5><strong>Titre :          </strong> {{ film.title }} </h5>
+
+                <h5><strong>Date de sortie : </strong> {{ film.release_date }} </h5>
+
+                <h5><strong>Note moyenne :   </strong> {{ film.vote_average }} </h5>
+
+                <h5><strong>Résumé :   </strong> {{ film.overview }} </h5>
+
+            </li>
+        
+            
+            <p>  </p>
+
+            <button class="btn btn-success"
+                    (click)="ajouterFilm()">
+                Streamer
+            </button>
+
+            <p>  </p>
+        
+        </div>
+    
+
+        <div class="col-2">
+            <app-panier-client></app-panier-client>
+        </div>    
+
+    </div> 
+</div>
+

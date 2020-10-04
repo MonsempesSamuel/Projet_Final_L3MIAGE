@@ -1,0 +1,55 @@
+<!-- <input type="button"
+    value="Deconnexion"
+    (click)="deconnexion()"
+    *ngIf="isConnected()">
+
+<div *ngIf="isConnected()"
+    class="profil">
+    <img [src]="getUrlPhotoProfil()"
+        class="photoProfil">
+    {{getNomUtilisateur()}}
+</div> -->
+
+<div *ngIf="!isConnected()">
+    <form class="form-signin" >
+        <div class="text-center mb-4">
+            
+            <h1 class="h3 mb-3 font-weight-normal">Connectez vous</h1>
+            <p>Veuillez saisir un mode de connexion</p>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="connexionGoogle()">Sign in with google</button>
+        <p class="mt-5 mb-3 text-muted text-center">2020</p>
+    </form>   
+</div>
+
+<div class="bg-light"  *ngIf="isConnected()">
+    <div class="container">
+        <div class="py-5 text-center">
+            <img class="d-block mx-auto mb-4" [src]="getUrlPhotoProfil()" alt="" width="72" height="72">
+            <h2>Profil utilisateur</h2>
+            <p class="lead">Merci de vous être connecté, retrouvez ci dessous l'ensemble de vos informations personnels</p>
+        </div>
+        <h4 class="mb-3">Vos coordoonées</h4>
+        <div class="needs-validation" novalidate="">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="firstName">Prénom</label>
+                    <span type="text" class="form-control" id="firstName">{{getPrenomUtilisateur()}}</span>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="lastName">Last name</label>
+                    <span type="text" class="form-control" id="lastName">{{getNomUtilisateur()}}</span>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="email">Email</label>
+                <span type="email" class="form-control" id="email" >{{getEmail()}}</span>
+            </div>
+            <div class="mb-3">
+                <label for="email">Numéro de téléphone</label>
+                <span type="email" class="form-control" id="email" >{{getPhoneNumber()}}</span>
+            </div>
+            <button class="btn btn-lg btn-danger btn-block" type="submit" (click)="deconnexion()">Se déconnecter</button>
+        </div> 
+    </div>
+</div>
